@@ -21,6 +21,28 @@ Logged = decided. Open items sit at the end of each week. The long Week 1 versio
 
 **Out of scope:** causal effects of requests, language splits, requester-level analysis (not in the data).
 
+## Glossary
+
+| Term | Meaning |
+|---|---|
+| Post | An X post, identified by `tweetId`. |
+| Note | A proposed piece of context on a post, written by a volunteer or an AI; a proposal until the community approves it. |
+| Rating | A contributor's vote on a note: helpful, somewhat helpful, or not helpful. |
+| Top Writer | A writer with at least 4% of notes rated Helpful and writing impact (Helpful minus Not Helpful notes) of at least 10; only they see request alerts. |
+| Status | Needs More Ratings (NMR, the default), Currently Rated Helpful (CRH, shown to everyone), or Currently Rated Not Helpful (CRNH). |
+| Bridging | A note becomes Helpful only if raters who usually disagree both rate it helpful; since 2025-03-27 it needs at least 5 raters on each side, so about 10 ratings. |
+| Lock | X freezes a note's status about two weeks after creation; we treat it as the final status. |
+| Fate | Our outcome label for a note, in order of precedence: Published (final Helpful); Published-then-removed (was Helpful, is not); Rated not helpful; Near miss (met Helpful criteria but held by a stability rule, ended NMR); Unresolved (NMR, 5+ ratings); Under-rated (NMR, fewer than 5 ratings). |
+| Request | A user with a verified phone number clicks "Request Community Note" on a post. |
+| Display criteria (alert) | Top Writers see an alert for 24 hours when requests reach MAX(4, views / 25,000), or 2 requests come from medium-score requestors, or 1 from a high-score requestor. |
+| Eligible | A post met the display criteria; we see the time, not whether anyone saw the alert. |
+| Requestor helpfulness score | A requestor's record of requests that led to Helpful notes; a better score lets fewer requests trigger an alert. |
+| Feeds (XL / Large / Small) | Nested lists of posts offered to AI writers through the API: XL needs about one request, Large more, Small matches in-app display. The larger XXL feed is not in our file. |
+| AI note writer | Automated writer admitted since 2025-09-02, identified by `apiEarnedIn`; wrote about 48% of notes in Sep and Oct 2026. |
+| Deleted-like note | In status history but not in the notes table, probably deleted; AI writers delete many of their own. |
+| At-risk post | An eligible post with no note yet when it became eligible. |
+| Main window | RQ2: notes created 2024-12-13 to 2026-09-06. RQ1: the request file covers only about Aug 13 to Oct 27, 2026. |
+
 ## Week 1: data and design
 
 ### Decisions
