@@ -1,5 +1,26 @@
 # decisions.md
 
+Logged = decided. Open items sit at the end of each week. The long Week 1 version is in `decisions_archive_week1.md`.
+
+## Research questions (final)
+
+**Topic:** why proposed Community Notes fail to become Helpful, and whether requests and AI writers change that.
+
+**RQ1 (requests and speed).** For posts first eligible between 2026-08-13 and 2026-10-12:
+- (a) How quickly does a first note follow the first request (the XL time), and does this differ by the highest request feed the post later reached (XL only, Large, or Small = in-app display)?
+- (b) Among posts that reach in-app display with no note yet, what share get a first note within 24 hours (6 and 72 hours secondary), and how often is that first note AI-written?
+
+*Descriptive; no causal claims.*
+
+**RQ2 (failure modes).** For notes created 2024-12-13 to 2026-09-06 (extended series from 2023-02-01):
+- (a) What share of notes ends in each fate: Published, Published-then-removed, Rated not helpful, Near miss, Unresolved, Under-rated?
+- (b) How do these shares change month by month as scoring rules change and ratings per note fall?
+- (c) Do fates differ for AI-written vs. other notes, once deleted notes are included?
+
+**Working expectation (from the 1% sample, to be tested):** most failures are notes that were rated but not resolved, not notes that went unrated; under-rating may rise in 2026 as ratings per note fall.
+
+**Out of scope:** causal effects of requests, language splits, requester-level analysis (not in the data).
+
 ## Week 1: data and design
 
 ### Decisions
