@@ -1,0 +1,23 @@
+# Raw and derived data (never commit; large and governed by X's terms)
+data/
+*.tsv
+*.zip
+*.parquet
+*.duckdb
+*.duckdb.wal
+.duckdb_tmp/
+
+# Third-party code (record the commit hash in decisions.md instead)
+tools/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/venv/
+venv/
