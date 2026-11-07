@@ -78,7 +78,7 @@ Logged = decided. Open items sit at the end of each week. The long Week 1 versio
 
 ### Open items
 
-- Optional: why AI notes get fewer ratings than human notes (median about 9 vs. 15), for example lower-visibility posts.
+- None.
 
 ## C. Changes from the proposal
 
@@ -99,6 +99,7 @@ Logged = decided. Open items sit at the end of each week. The long Week 1 versio
 - AI authors wrote about 56% of Helpful notes created in June 2026 (the paper's Community Writer alone: 52%) and 44.7% of all notes (Community Writer: 41%).
 - RQ1 sample (first eligible 2026-08-13 to 10-12): 395,951 posts; highest feed reached: XL only 259,500, Large 113,663, Small/in-app 22,788. Among posts with no note at first eligibility, a first note within 72 hours: XL only 10.0%, Large 36.1%, Small/in-app 66.6%; when a note comes it is fast (median 0.2 to 0.8 hours); AI wrote 56 to 72% of first notes within 24 hours.
 - RQ1b (in-app group, 22,788 posts): 35.3% already had a note before display; of the 14,739 without one, 46.3% got a first note within 6 hours of display, 52.4% within 24 hours, 53.6% within 72 hours; AI wrote 53.7% of those 24-hour first notes.
+- AI ratings gap (main population, created May to Sep 2026): AI notes get 0.46 times the mean ratings of human notes (28.6 vs. 62.0; medians 10 vs. 16; 50.2% vs. 60.9% reach 10+ ratings). The gap holds within every latency bucket, for first and later notes, for regular notes, and at every request level (median ratings AI vs. human: no request 6 vs. 8, XL only 7 vs. 19, Large 8 vs. 25, Small/in-app 26 vs. 56); adjusting for these leaves the rate ratio at 0.46. Notification-driven (population-sampled) ratings are about 3% of ratings for both. Not explained by the data: post views, the AI label raters see, and rating-queue routing.
 - Aug 2024 step: unrated notes disappear from 2024-07-25 (0 ratings: 7 to 8% to 0.3%), so Under-rated falls from 23.1% (Jul) to 18.0% (Aug). Ratings per new note also rose from about 63 to 67 (Jan to Jun 2024) to 91 to 94 (Aug to Oct 2024). Across periods, Under-rated moves opposite to ratings per new note: 24.6% at 67 (Jun 2024), 18 to 19% at 91 to 94 (Aug to Oct 2024), 28.8% at about 42 (Aug 2026).
 - Validation: 82.2% of notes never left NMR by 2025-06-25 (Gong & Wu: 83.1%); 11.4% ever Helpful by 2025-03-31 (DDIA: over 90% never published, i.e. currently Helpful).
 - Deleted-like notes are 9.7% of the main window; 2.7% of them are Helpful vs. 9.4% of the rest.
