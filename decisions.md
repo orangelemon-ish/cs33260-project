@@ -66,18 +66,24 @@ Logged = decided. Open items sit at the end of each week. The long Week 1 versio
 
 ## Week 2: fate table and trends
 
+### Decisions
+
+| ID | Decision | Notes |
+|---|---|---|
+| W2-1 | **Fate table:** one row per status-history note, with flags for the main window, extended window, deleted-like, author type and class. Every analysis filters this one table (main population, S2, extended). | Built by `10_build_fate_table.py` into `data/derived/` (never committed). Verified: final-status totals match the earlier full-table check exactly. |
+| W2-2 | **Validation accepted:** the fate table reproduces the published figures closely. Through 2025-06-25, 82.2% of notes never left NMR (Gong & Wu: 83.1%); through 2025-03-31, 11.4% were ever Helpful, and over all history 91.6% of notes are not currently Helpful (DDIA: over 90% never published). | DDIA's "published" most likely means currently Helpful, not ever Helpful. Our status-history count through 2025-06-25 is 2,111,978 vs. Gong & Wu's 2,108,340. |
+| W2-3 | **Near miss is 0 before 2024-08-01 by construction** (the stability-hold field starts then), so any figure or claim that spans earlier months reports Unresolved and Near miss together; trend claims use the main window (from 2024-12-13). | Under-rated depends only on rating counts, not on scoring rules, so its trend can be read across the whole series. |
+| W2-4 | **RQ1 first notes come from the notes table only.** Deleted notes have no post ID there, so posts whose only note was deleted count as having no note. | About 20% of AI notes are deleted, so speeds and the AI share of first notes are approximate; state this as a limitation. |
+| W2-5 | **The Aug 2024 step is explained and is a data break, not behavior.** From notes created on 2024-07-25, notes with no rating at all drop from about 7 to 8% to about 0.3%, which accounts for nearly all of the 5 to 6 point fall in Under-rated. The extended-series figures mark 2024-07-25 as a break; the main window (from 2024-12-13) is unaffected. | Not a lock artifact: counting ratings in a fixed first 14 days gives the same shares within 0.4 points. The date matches the change-log entry on faster scoring of new notes; the mechanism is our guess (faster scoring puts new notes in rating queues). |
+
 ### Open items
 
-- Build the note-level fate table and check it against the 1% sample (8.7% Helpful, 4.2% Not Helpful, 21.6% under-rated, 65.5% 5+ ratings but NMR).
-- Monthly fate shares with confidence intervals and rule-change dates marked.
-- Test the AI-writer paper's claims: AI share of Helpful notes created in June 2026 (at least 52%) and of all notes (at least 41%).
-- Recount the RQ1 sample for the 2026-08-13 to 2026-10-12 window.
-- Validate against DDIA's finding that over 90% of notes never publish.
+- Optional: why AI notes get fewer ratings than human notes (median about 9 vs. 15), for example lower-visibility posts.
 
 ## C. Changes from the proposal
 
 - RQ1 is descriptive and uses a different clock; RQ3 is dropped; language splits and Zenodo are dropped.
-- The first look at the data does not support the expected result that under-rating causes most failures (21.6% under-rated vs. 65.5% rated but unresolved).
+- The first look at the data does not support the expected result that under-rating causes most failures (main window: 21.5% under-rated vs. 58.4% rated but unresolved).
 - Three papers already study requests, none of them AI writers, and they used per-request data that no longer exists in the public file.
 
 ## D. Key facts
@@ -86,6 +92,15 @@ Logged = decided. Open items sit at the end of each week. The long Week 1 versio
 - Scoring rule changes to mark on plots: 2025-03-27, 04-08, 05-28, 06-30, 11-10; 2026-06-30, 07-28, 08-03, 09-21.
 - Display criteria: MAX(4, views/25,000) requests, or 2 medium-score requestors, or 1 high-score requestor; shown 24 hours; requesting needs a verified phone number.
 - Ratings per new note fell from about 114 (Sep 2025) to about 42 (Aug and Sep 2026).
+- Fates in the main window (main population, 1,222,673 notes): Published 11.4%, Published-then-removed 2.4%, Rated not helpful 4.3%, Near miss 1.9%, Unresolved 58.4%, Under-rated 21.5%. Fate-table totals match the earlier full-table check exactly.
+- Monthly trend (main population): Under-rated rose from about 20% (Mar 2026) to 26.5% (Apr 2026) and 29 to 30% (Aug and Sep 2026), while Unresolved fell from about 59% to about 54%; this starts the same month AI notes jumped from 14% to 37% of all notes. Published-then-removed fell from 4.6% (2024) to 2.5% (2025) after the Oct 2024 flip-flop fix. Published slipped from about 12 to about 10 to 11% in 2026.
+- Author type, Mar to Aug 2026 (main population): Under-rated rose for human notes (19.9% to 25.4%) and AI notes (21.6% to 32.8%); about 85% of the 8.6-point overall rise is within-type and about 15% is AI notes growing from 17% to 46% of notes. Median ratings per note: human 28 (Jan 2026) to 15 (Aug); AI 29 to 9. So rating attention is spread thinner for everyone.
+- AI vs. other notes, Jul to Oct 2026 (S2, deleted included): Published 9 to 10% for AI vs. 5 to 7% for others; Under-rated 29 to 31% vs. 26.5 to 27.6%. Surviving AI notes (main population) look better (Published 11 to 13%), so deletion flatters AI.
+- AI authors wrote about 56% of Helpful notes created in June 2026 (the paper's Community Writer alone: 52%) and 44.7% of all notes (Community Writer: 41%).
+- RQ1 sample (first eligible 2026-08-13 to 10-12): 395,951 posts; highest feed reached: XL only 259,500, Large 113,663, Small/in-app 22,788. Among posts with no note at first eligibility, a first note within 72 hours: XL only 10.0%, Large 36.1%, Small/in-app 66.6%; when a note comes it is fast (median 0.2 to 0.8 hours); AI wrote 56 to 72% of first notes within 24 hours.
+- RQ1b (in-app group, 22,788 posts): 35.3% already had a note before display; of the 14,739 without one, 46.3% got a first note within 6 hours of display, 52.4% within 24 hours, 53.6% within 72 hours; AI wrote 53.7% of those 24-hour first notes.
+- Aug 2024 step: unrated notes disappear from 2024-07-25 (0 ratings: 7 to 8% to 0.3%), so Under-rated falls from 23.1% (Jul) to 18.0% (Aug). Ratings per new note also rose from about 63 to 67 (Jan to Jun 2024) to 91 to 94 (Aug to Oct 2024). Across periods, Under-rated moves opposite to ratings per new note: 24.6% at 67 (Jun 2024), 18 to 19% at 91 to 94 (Aug to Oct 2024), 28.8% at about 42 (Aug 2026).
+- Validation: 82.2% of notes never left NMR by 2025-06-25 (Gong & Wu: 83.1%); 11.4% ever Helpful by 2025-03-31 (DDIA: over 90% never published, i.e. currently Helpful).
 - Deleted-like notes are 9.7% of the main window; 2.7% of them are Helpful vs. 9.4% of the rest.
 
 ## E. Log
